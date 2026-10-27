@@ -1,0 +1,11 @@
+/* ThraiBit — colores y tipografía de interfaz */
+:root {
+  --tb-navy: #142B3B;
+  --tb-mint: #42D6B0;
+  --tb-cream: #F7F6F2;
+  --tb-amber: #F2B544;
+  --tb-danger: #B42318;
+  --tb-font: Inter, system-ui, sans-serif;
+}
+.tb-primary { background: var(--tb-mint); color: var(--tb-navy); }
+.tb-warning { background: var(--tb-amber); color: var(--tb-navy); }

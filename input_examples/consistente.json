@@ -1,0 +1,85 @@
+{
+  "scope": {
+    "branch_id": "sucursal-demo",
+    "shift_id": "turno-demo",
+    "ingredient_id": "pescado",
+    "state": "limpio-listo-para-porcionar",
+    "unit": "g"
+  },
+  "production": {
+    "ceviche": 1,
+    "plancha": 1
+  },
+  "portions": [
+    {
+      "id": "porcion-001",
+      "scope": {
+        "branch_id": "sucursal-demo",
+        "shift_id": "turno-demo",
+        "ingredient_id": "pescado",
+        "state": "limpio-listo-para-porcionar",
+        "unit": "g"
+      },
+      "dish_id": "ceviche",
+      "kind": "venta",
+      "initial_g": 172.0,
+      "final_g": 150.0
+    },
+    {
+      "id": "porcion-002",
+      "scope": {
+        "branch_id": "sucursal-demo",
+        "shift_id": "turno-demo",
+        "ingredient_id": "pescado",
+        "state": "limpio-listo-para-porcionar",
+        "unit": "g"
+      },
+      "dish_id": "plancha",
+      "kind": "cortesía",
+      "initial_g": 200.0,
+      "final_g": 200.0
+    }
+  ],
+  "movements": [],
+  "inventory": {
+    "initial_g": 1000,
+    "incoming_g": 0,
+    "received_g": 0,
+    "sent_g": 0,
+    "final_g": 650
+  },
+  "audit": [
+    {
+      "id": "792e7705-de95-4eee-8fa3-0d168f9a6340",
+      "at": "2026-10-27T05:54:35.366700+00:00",
+      "action": "captura_inicial",
+      "record_id": "porcion-001",
+      "actor": "cocina-demo"
+    },
+    {
+      "id": "9f48bf48-7708-47e3-8640-a643b554528e",
+      "at": "2026-10-27T05:54:35.366700+00:00",
+      "action": "confirmacion_final",
+      "record_id": "porcion-001",
+      "actor": "cocina-demo",
+      "previous_g": null,
+      "final_g": 150.0
+    },
+    {
+      "id": "49b30970-88cb-4bea-b6ff-e2aa9e520250",
+      "at": "2026-10-27T05:54:35.366700+00:00",
+      "action": "captura_inicial",
+      "record_id": "porcion-002",
+      "actor": "cocina-demo"
+    },
+    {
+      "id": "0eb935da-6a12-436d-af10-ed8092c96320",
+      "at": "2026-10-27T05:54:35.366700+00:00",
+      "action": "confirmacion_final",
+      "record_id": "porcion-002",
+      "actor": "cocina-demo",
+      "previous_g": null,
+      "final_g": 200.0
+    }
+  ]
+}

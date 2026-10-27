@@ -1,0 +1,138 @@
+{
+  "ok": true,
+  "data": {
+    "scope": {
+      "branch_id": "sucursal-demo",
+      "shift_id": "turno-demo",
+      "ingredient_id": "pescado",
+      "state": "limpio-listo-para-porcionar",
+      "unit": "g"
+    },
+    "production": {
+      "ceviche": 1,
+      "plancha": 1
+    },
+    "portions": [
+      {
+        "id": "porcion-001",
+        "scope": {
+          "branch_id": "sucursal-demo",
+          "shift_id": "turno-demo",
+          "ingredient_id": "pescado",
+          "state": "limpio-listo-para-porcionar",
+          "unit": "g"
+        },
+        "dish_id": "ceviche",
+        "kind": "venta",
+        "initial_g": 172.0,
+        "final_g": 172.0
+      },
+      {
+        "id": "porcion-002",
+        "scope": {
+          "branch_id": "sucursal-demo",
+          "shift_id": "turno-demo",
+          "ingredient_id": "pescado",
+          "state": "limpio-listo-para-porcionar",
+          "unit": "g"
+        },
+        "dish_id": "plancha",
+        "kind": "cortesía",
+        "initial_g": 200.0,
+        "final_g": 200.0
+      }
+    ],
+    "movements": [],
+    "inventory": {
+      "initial_g": 1000,
+      "incoming_g": 0,
+      "received_g": 0,
+      "sent_g": 0,
+      "final_g": 628
+    },
+    "audit": [
+      {
+        "id": "d0564f5d-8be7-4f89-8b93-b5f666331b5c",
+        "at": "2026-10-27T05:54:35.375018+00:00",
+        "action": "captura_inicial",
+        "record_id": "porcion-001",
+        "actor": "cocina-demo"
+      },
+      {
+        "id": "7a8d1f35-769e-4a33-b519-f256b4983d59",
+        "at": "2026-10-27T05:54:35.375018+00:00",
+        "action": "confirmacion_final",
+        "record_id": "porcion-001",
+        "actor": "cocina-demo",
+        "previous_g": null,
+        "final_g": 172.0
+      },
+      {
+        "id": "6d46df39-76c9-427e-91fa-64d40d9aab27",
+        "at": "2026-10-27T05:54:35.375018+00:00",
+        "action": "captura_inicial",
+        "record_id": "porcion-002",
+        "actor": "cocina-demo"
+      },
+      {
+        "id": "0130136e-f9c0-4349-a195-50646a330cf1",
+        "at": "2026-10-27T05:54:35.375018+00:00",
+        "action": "confirmacion_final",
+        "record_id": "porcion-002",
+        "actor": "cocina-demo",
+        "previous_g": null,
+        "final_g": 200.0
+      }
+    ]
+  },
+  "investigation": {
+    "mode": "revision_determinista_sin_IA",
+    "report": {
+      "status": "completo",
+      "standard_g": 350.0,
+      "weighed_g": 372.0,
+      "inventory_consumption_g": 372.0,
+      "documented_g": 0.0,
+      "portion_deviation_g": 22.0,
+      "unexplained_g": 0.0,
+      "missing_weighings": {
+        "ceviche": 0,
+        "plancha": 0
+      },
+      "pending_movements": [],
+      "issues": []
+    },
+    "facts": [
+      "Consumo pesado confirmado: 372.0 g.",
+      "Usos aprobados no incluidos en porciones: 0.0 g."
+    ],
+    "evidence": [],
+    "hypotheses": [],
+    "pending_data": [],
+    "evaluation": "Los registros pendientes requieren validación humana. Una diferencia no demuestra su causa."
+  },
+  "trace": {
+    "id": "7a0909ea-caf8-46bc-b3b1-158d8bb77891",
+    "at": "2026-10-27T05:54:35.375018+00:00",
+    "action": "conciliacion_local_sin_IA",
+    "record_id": "turno-demo",
+    "actor": "cli",
+    "input_sha256": "f219ef2868601500a55e9689bb39e929bd86d955f99c8ac5416a357be95a8022",
+    "mode": "muestra_sin_servicios",
+    "report": {
+      "status": "completo",
+      "standard_g": 350.0,
+      "weighed_g": 372.0,
+      "inventory_consumption_g": 372.0,
+      "documented_g": 0.0,
+      "portion_deviation_g": 22.0,
+      "unexplained_g": 0.0,
+      "missing_weighings": {
+        "ceviche": 0,
+        "plancha": 0
+      },
+      "pending_movements": [],
+      "issues": []
+    }
+  }
+}

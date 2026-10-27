@@ -1,0 +1,101 @@
+{
+  "scope": {
+    "branch_id": "sucursal-demo",
+    "shift_id": "turno-demo",
+    "ingredient_id": "pescado",
+    "state": "limpio-listo-para-porcionar",
+    "unit": "g"
+  },
+  "production": {
+    "ceviche": 1,
+    "plancha": 1
+  },
+  "portions": [
+    {
+      "id": "porcion-001",
+      "scope": {
+        "branch_id": "sucursal-demo",
+        "shift_id": "turno-demo",
+        "ingredient_id": "pescado",
+        "state": "limpio-listo-para-porcionar",
+        "unit": "g"
+      },
+      "dish_id": "ceviche",
+      "kind": "venta",
+      "initial_g": 172.0,
+      "final_g": 150.0
+    },
+    {
+      "id": "porcion-002",
+      "scope": {
+        "branch_id": "sucursal-demo",
+        "shift_id": "turno-demo",
+        "ingredient_id": "pescado",
+        "state": "limpio-listo-para-porcionar",
+        "unit": "g"
+      },
+      "dish_id": "plancha",
+      "kind": "cortesía",
+      "initial_g": 200.0,
+      "final_g": 200.0
+    }
+  ],
+  "movements": [
+    {
+      "id": "merma-001",
+      "scope": {
+        "branch_id": "sucursal-demo",
+        "shift_id": "turno-demo",
+        "ingredient_id": "pescado",
+        "state": "limpio-listo-para-porcionar",
+        "unit": "g"
+      },
+      "kind": "merma",
+      "grams": 40,
+      "approved": false,
+      "portion_id": null,
+      "evidence": "Ficha ficticia M-001: 40 g de pescado limpio caído durante preparación; verificar con encargado."
+    }
+  ],
+  "inventory": {
+    "initial_g": 1000,
+    "incoming_g": 0,
+    "received_g": 0,
+    "sent_g": 0,
+    "final_g": 600
+  },
+  "audit": [
+    {
+      "id": "08554b9d-4031-4a4f-ae5b-c8d9f20f9cfa",
+      "at": "2026-10-27T05:54:35.382206+00:00",
+      "action": "captura_inicial",
+      "record_id": "porcion-001",
+      "actor": "cocina-demo"
+    },
+    {
+      "id": "a231fb56-b544-409b-ad4f-4217d7366e7a",
+      "at": "2026-10-27T05:54:35.382206+00:00",
+      "action": "confirmacion_final",
+      "record_id": "porcion-001",
+      "actor": "cocina-demo",
+      "previous_g": null,
+      "final_g": 150.0
+    },
+    {
+      "id": "e69762d6-000a-4d09-8983-45ee60a23a7b",
+      "at": "2026-10-27T05:54:35.382206+00:00",
+      "action": "captura_inicial",
+      "record_id": "porcion-002",
+      "actor": "cocina-demo"
+    },
+    {
+      "id": "9b4473af-07fa-4afd-b3f0-87e20648bd6f",
+      "at": "2026-10-27T05:54:35.382206+00:00",
+      "action": "confirmacion_final",
+      "record_id": "porcion-002",
+      "actor": "cocina-demo",
+      "previous_g": null,
+      "final_g": 200.0
+    }
+  ]
+}
